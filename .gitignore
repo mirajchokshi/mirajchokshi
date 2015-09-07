@@ -1,4 +1,4 @@
-S X files
+# OS X files
 .DS_Store
 
 # Dependency directory
@@ -8,3 +8,5 @@ node_modules
 # Images
 images
 
+# gh-pages
+gh-pages
