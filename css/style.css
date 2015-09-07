@@ -1,0 +1,173 @@
+/* Resets + Type
+----------------------------- */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    text-rendering: optimizeLegibility;
+    vertical-align: baseline; }
+article, aside, details, figcaption, figure, hgroup, menu, nav, section {
+  display: block; }
+body {
+  line-height: 1;
+  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+
+ }
+ol, ul {
+  list-style: none; }
+blockquote, q {
+  quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  color: #222;  text-decoration: none;
+  opacity: .5;
+  -webkit-transition: opacity .1s ease-in;
+}
+a:hover,
+a:focus{
+  opacity: 1;
+} 
+/* Layout 
+----------------------------- */
+.container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #f6f6f6;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  color: #222;
+  text-align: center;
+}
+.container:after {
+  content: '';
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  left: 5px;
+  border: 1px solid #222;
+  border-radius: 3px;
+}
+
+.container-inner {
+  vertical-align: middle;
+  z-index: 2;
+  max-width: 400px;
+  margin: auto;
+  position: absolute;
+  top: 25%; left: 0; bottom: 25%; right: 0;
+        -webkit-animation:1s unveil;
+    animation:1s unveil
+}
+.name {
+  position: relative;
+  z-index: 2;
+  font-size: 35px;
+  line-height: 1;
+  letter-spacing: em;
+  font-weight: 300;
+  margin-bottom: 0;
+  margin-top: 28px;
+  -webkit-animation:2s unblur;
+  animation:2s unblur
+}
+.tagline {
+  margin-top: 25px;
+  position: relative;
+  z-index: 2;
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+}
+.city {
+  margin-top: 2px;
+  position: relative;
+  z-index: 2;
+  font-size: 20px;
+  line-height: 2.2;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+}
+/* Social Links
+----------------------------- */
+.social-links {
+  position: fixed;
+  left: 0;
+  right: 0;
+  padding: 0;
+}
+.social-links > li {
+  display: inline-block;
+}
+.social-link-icon {
+  display: inline-block;
+  background-image: url("../images/social-icons.png");
+  height: 25px;
+  background-size: 123px 25px;
+  text-indent: -9999px;
+  margin-left: 15px;
+  opacity: .4;
+  -webkit-transition: all .1s ease-in;
+}
+.social-links .email-link-outer {
+  margin-top: 10px;
+  display: block;
+} 
+.social-link-icon:hover{
+  opacity: 1;
+}
+.social-link-icon-twitter {
+  margin-left: 0;
+  width: 27px;
+}
+.social-link-icon-linkedin {
+  background-position: -26px 0;
+  width: 25px;
+}
+.social-link-icon-github {
+  background-position: -52px 0;
+  width: 22px;
+}
+.social-link-icon-dribble {
+  background-position: -74px 0;
+  width: 26px;
+}
+.social-link-icon-medium {
+  background-position: -100px 0;
+  width: 24px;
+}
+/* Smaller Widths 
+----------------------------- */
+@media (max-width: 600px) {
+
+}
+@media (max-width: 400px) {
+
+
+}
+
+@media (orientation : landscape) { 
+
+  .city {
+  	margin-top: 0px
+  }
+
+}
