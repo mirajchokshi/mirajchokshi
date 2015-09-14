@@ -30,7 +30,7 @@ table {
   border-spacing: 0; }
 
 a {
-  color: #222;  text-decoration: none;
+  color: #fff;  text-decoration: none;
   opacity: .5;
   -webkit-transition: opacity .1s ease-in;
 }
@@ -46,24 +46,24 @@ a:focus{
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #f6f6f6;
+  background-color: #222;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   background-position: center;
-  color: #222;
+  color: #fff;
   text-align: center;
 }
 .container:after {
   content: '';
   position: fixed;
-  top: 5px;
-  right: 5px;
-  bottom: 5px;
-  left: 5px;
-  border: 1px solid #222;
-  border-radius: 3px;
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  border: 1px solid rgba(255,255,255,.2) ;
+  border-radius: 2px;
 }
 
 .container-inner {
@@ -73,8 +73,6 @@ a:focus{
   margin: auto;
   position: absolute;
   top: 25%; left: 0; bottom: 25%; right: 0;
-        -webkit-animation:1s unveil;
-    animation:1s unveil
 }
 .name {
   position: relative;
@@ -113,6 +111,7 @@ a:focus{
   left: 0;
   right: 0;
   padding: 0;
+  bottom: 20px;
 }
 .social-links > li {
   display: inline-block;
