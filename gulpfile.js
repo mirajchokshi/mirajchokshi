@@ -21,7 +21,7 @@ gulp.task('uphtml', function() {
         'css': 'css/bundled.min.css',
         'js': 'js/bundled.min.js'
     }))
-    .pipe(gulp.dest('../mirajchokshi.github.io/'));
+    .pipe(gulp.dest('gh-pages/'));
 });
 
 // Concat + reduce + minify CSS
@@ -29,12 +29,12 @@ gulp.task('conredmincss', function () {
   gulp.src('css/*.css')
     .pipe(concatCss("bundled.css"))
     .pipe(uncss({
-            html: ['../mirajchokshi.github.io/index.html'],
+            html: ['gh-pages/index.html'],
             ignore: ['.navbar-toggle.active .icon-bar:nth-of-type(1)', '.navbar-toggle.active .icon-bar:nth-of-type(2)','.navbar-toggle.active .icon-bar:nth-of-type(3)', '.collapsing'],
         }))
     .pipe(minifyCSS({keepBreaks:true}))
     .pipe(rename("bundled.min.css"))
-    .pipe(gulp.dest('../mirajchokshi.github.io/css'));
+    .pipe(gulp.dest('gh-pages/css'));
 });
 
 // Concat + minify JS 
@@ -49,7 +49,7 @@ gulp.task('conminjs', function(){
     .pipe(concatJs("bundled.js"))
     .pipe(uglify())
     .pipe(rename("bundled.min.js"))
-    .pipe(gulp.dest('../mirajchokshi.github.io/js/'));
+    .pipe(gulp.dest('gh-pages/js/'));
 });
 
 // Optimize images
@@ -60,7 +60,7 @@ gulp.task('optimg', function () {
             svgoPlugins: [{removeViewBox: false}],
             use: [pngquant()]
         }))
-        .pipe(gulp.dest('../mirajchokshi.github.io/images'));
+        .pipe(gulp.dest('gh-pages/images'));
 });
  
 
